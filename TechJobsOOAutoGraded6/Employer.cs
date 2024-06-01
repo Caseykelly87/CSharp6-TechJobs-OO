@@ -7,6 +7,7 @@ namespace TechJobsOOAutoGraded6
         private static int nextId = 1;
         public string Value { get; set; }
 
+       
         public Employer()
         {
             Id = nextId;
@@ -17,6 +18,7 @@ namespace TechJobsOOAutoGraded6
         {
             Value = value;
         }
+
 
         public override bool Equals(object obj)
         {
