@@ -42,7 +42,7 @@ namespace TechJobsOOAutoGraded6
             return HashCode.Combine(Id);
         }
 
-        public override bool Equals(object obj)
+        public override bool Equals(object? obj)
         {
             
             return obj is Job job &&
@@ -54,7 +54,28 @@ namespace TechJobsOOAutoGraded6
         //Until you create this method, you will not be able to print a job to the console.
 
 
-    
+        public override string ToString()
+        {
+            string emptyS = "Data not available";
+            
+            string jName = string.IsNullOrEmpty(Name) ? emptyS : Name;
+            
+            // string eName = EmployerName.Value;
+            // string eName = EmployerName.Equals(null) ? emptyS : EmployerName.ToString();
+            
+            // string eLocation = EmployerLocation.Value;
+            // string eLocation = string.IsNullOrEmpty(EmployerLocation.ToString()) ? emptyS : eL;
+            
+            // string jType = JobType.Value;
+            // string jType = string.IsNullOrEmpty(jT) ? emptyS : jT;
+            
+            // string jCore = JobCoreCompetency.Value;
+            // string jCore = string.IsNullOrEmpty(jC) ? emptyS : jC;
+
+            string nl = Environment.NewLine;
+
+            return $"{nl}ID: {Id}{nl}Name: {jName}{nl}Employer: {EmployerName}{nl}Location: {EmployerLocation}{nl}Position Type: {JobType}{nl}Core Competency: {JobCoreCompetency}{nl}"; 
+        }
 
     }
 }

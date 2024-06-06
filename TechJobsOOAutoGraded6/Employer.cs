@@ -20,7 +20,7 @@ namespace TechJobsOOAutoGraded6
         }
 
 
-        public override bool Equals(object obj)
+        public override bool Equals(object? obj)
         {
             return obj is Employer employer &&
                    Id == employer.Id;
@@ -33,7 +33,7 @@ namespace TechJobsOOAutoGraded6
 
         public override string ToString()
         {
-            return Value;
+            return string.IsNullOrEmpty(Value) ? "Data not available" : Value;
         }
     }
 }
