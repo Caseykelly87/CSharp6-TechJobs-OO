@@ -102,6 +102,7 @@ namespace TechJobsOO.Tests
             MethodInfo mInfo = typeof(Job).GetMethod("Equals");
             MethodBody mBody = mInfo.GetMethodBody();
             int lviCount = mBody.LocalVariables.Count;
+            Console.WriteLine(mBody);
             string mName = mInfo.ReflectedType.Name;
             string mGBD = mInfo.GetBaseDefinition().ReflectedType.Name;
 
